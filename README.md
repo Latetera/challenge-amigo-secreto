@@ -1,4 +1,4 @@
-# Desafío didáctico "Amigo Secreto" alura LATAM
+# Desafío didáctico "Amigo Secreto" Alura LATAM
 ![insignia status](https://img.shields.io/badge/status-finalizado-brightgreen)
 ![insignia version](https://img.shields.io/badge/version-1.0-blue)
 
