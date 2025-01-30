@@ -53,18 +53,28 @@ function sortearAmigo() {
         let mensajeDelGanador = document.getElementById('resultado');
         // Mediante el DOM y template string muestra el resultado en el elemento seleccionado
         mensajeDelGanador.innerHTML = `El amigo secreto sorteado es: ${nombreDelGanador}`;
-
-        // Limpia el elemento que contiene los elementos 'li'
-        console.log(amigos.length);
-        for (let j = 0; j < amigos.length; j++) {
-            document.querySelector('li').remove();
-        }
-        // Re inicializa la lista 'amigos'
-        amigos = [];
-        console.log(amigos.length);
+        finalizarSorteo();        
 
     // En caso contrario, si la lista 'amigos' está vacía
     } else {
         alert('La lista está vacía, por favor inserte un nombre');
     }
+}
+
+function finalizarSorteo() {
+    // Limpia el elemento que contiene los elementos 'li'
+    console.log(amigos.length);
+    for (let j = 0; j < amigos.length; j++) {
+        document.querySelector('li').remove();
+    }
+    // Re inicializa la lista 'amigos'
+    amigos = [];
+    console.log(amigos.length);
+    // deshabilita los botones
+    deshabilitarBoton('.button-add');
+    deshabilitarBoton('.button-draw');
+}
+
+function deshabilitarBoton(claseBoton) {
+    document.querySelector(claseBoton).setAttribute('disabled', 'true');
 }
